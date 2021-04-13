@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="data_guard_group.xsl"?>
+
+<!--
+    A typical configuration take about 3-5 hours to manually configure
+-->
+<data_guard configuration_name="PRD_DG_CFG" ssh_private="/home/oracle/cloud_agent_private_key.txt">
+    <pairs>
+        <pair>
+            <file>PRD_phx4.xml</file>
+            <clusters>
+                <cluster>cl-s2ymuyrq-103</cluster>
+                <cluster>cl-haigmcva-072</cluster>
+            </clusters>
+            <cdbs>
+                <cdb>PRD_iad3vt</cdb>
+                <cdb>PRD_phx2xr</cdb>
+            </cdbs>
+        </pair>
+        <pair>
+            <file>PRD_clstd.xml</file>
+            <clusters>
+                <cluster>cl-s2ymuyrq-103</cluster>
+                <cluster>cl-g7sk24ca-0bd</cluster>
+            </clusters>
+            <cdbs>
+                <cdb>PRD_iad3vt</cdb>
+                <cdb>CLSTD_uniq</cdb>
+            </cdbs>
+        </pair>
+    </pairs>
+    <clusters>
+        <cluster>
+            <region>Ashburn</region>
+            <cluster_name>cl-s2ymuyrq-103</cluster_name>
+            <acfs_temp>/acfs01/acfs/tmp/</acfs_temp>
+            <node_1_short_name>aupp-hroradb-f9exx1</node_1_short_name>
+            <node_1_dns_name>aupp-hroradb-f9exx1.hlthedgexap.pvthlthedgeprod.oraclevcn.com</node_1_dns_name>
+            <node_1_ip>10.21.32.2</node_1_ip>
+            <node_1_asm_log>/u01/app/grid/diag/asm/+asm/+ASM1/trace/alert_+ASM1.log</node_1_asm_log>
+            <node_2_short_name>aupp-hroradb-f9exx2</node_2_short_name>
+            <node_2_dns_name>aupp-hroradb-f9exx2.hlthedgexap.pvthlthedgeprod.oraclevcn.com</node_2_dns_name>
+            <node_2_ip>10.21.32.3</node_2_ip>
+            <node_2_asm_log>/u01/app/grid/diag/asm/+asm/+ASM2/trace/alert_+ASM2.log</node_2_asm_log>
+            <scan_dns_name>aupp-hroradb-f9exx-scan.hlthedgexap.pvthlthedgeprod.oraclevcn.com</scan_dns_name>
+            <listener_location>/u01/app/18.1.0.0/grid/network/admin/</listener_location>
+            <scan_ip1>10.21.32.6</scan_ip1>
+            <scan_ip2>10.21.32.7</scan_ip2>
+            <scan_ip3>10.21.32.8</scan_ip3>
+        </cluster>
+        <cluster>
+            <region>Ashburn</region>
+            <cluster_name>cl-g7sk24ca-0bd</cluster_name>
+            <acfs_temp>/acfs01/acfs/tmp/</acfs_temp>
+            <node_1_short_name>autp-hroradb-utzrk1</node_1_short_name>
+            <node_1_dns_name>autp-hroradb-utzrk1.hlthedgeexa.pvthlthedgeprod.oraclevcn.com</node_1_dns_name>
+            <node_1_ip>10.21.32.105</node_1_ip>
+            <node_1_asm_log>/u01/app/grid/diag/asm/+asm/+ASM1/trace/alert_+ASM1.log</node_1_asm_log>
+            <node_2_short_name>autp-hroradb-utzrk2</node_2_short_name>
+            <node_2_dns_name>autp-hroradb-utzrk2.hlthedgeexa.pvthlthedgeprod.oraclevcn.com</node_2_dns_name>
+            <node_2_ip>10.21.32.106</node_2_ip>
+            <node_2_asm_log>/u01/app/grid/diag/asm/+asm/+ASM2/trace/alert_+ASM2.log</node_2_asm_log>
+            
+            <scan_dns_name>autp-hroradb-utzrk-scan.hlthedgeexa.pvthlthedgeprod.oraclevcn.com</scan_dns_name>
+            <listener_location>/u01/app/18.1.0.0/grid/network/admin/</listener_location>
+            <scan_ip1>10.21.32.109</scan_ip1>
+            <scan_ip2>10.21.32.110</scan_ip2>
+            <scan_ip3>11.21.32.111</scan_ip3>
+        </cluster>
+        <cluster>
+            <region>Phoenix</region>
+            <cluster_name>cl-haigmcva-072</cluster_name>
+            <acfs_temp>/acfs01/acfs/tmp/</acfs_temp>
+            <node_1_short_name>aupp-hroradb-bfcfz1</node_1_short_name>
+            <node_1_dns_name>aupp-hroradb-bfcfz1.hlthedgexap.pvthlthedgedr.oraclevcn.com</node_1_dns_name>
+            <node_1_ip>10.21.137.2</node_1_ip>
+            <node_1_asm_log>/u01/app/grid/diag/asm/+asm/+ASM1/trace/alert_+ASM1.log</node_1_asm_log>
+            <node_2_short_name>aupp-hroradb-bfcfz2</node_2_short_name>
+            <node_2_dns_name>aupp-hroradb-bfcfz2.hlthedgexap.pvthlthedgedr.oraclevcn.com</node_2_dns_name>
+            <node_2_ip>10.21.137.3</node_2_ip>
+            <node_2_asm_log>/u01/app/grid/diag/asm/+asm/+ASM2/trace/alert_+ASM2.log</node_2_asm_log>
+            
+            <scan_dns_name>aupp-hroradb-bfcfz-scan.hlthedgexap.pvthlthedgedr.oraclevcn.com</scan_dns_name>
+            <listener_location>/u01/app/18.1.0.0/grid/network/admin/</listener_location>
+            <scan_ip1>10.21.133.6</scan_ip1>
+            <scan_ip2>10.21.133.7</scan_ip2>
+            <scan_ip3>10.21.133.8</scan_ip3>
+        </cluster>
+    </clusters>
+    <users>
+        <user role="sysdba">
+            <user_name>sys</user_name>
+            <password>bSwocJs-b1_540d01</password>
+        </user>
+        <user role="normal">
+            <user_name>dbsnmp</user_name>
+            <password>bSwocJs-b1_540d01</password>
+        </user>
+        <user role="sysasm">
+            <user_name>sys</user_name>
+            <password>bSwocJs-b1_540d01</password>
+        </user>
+    </users>
+    <cdbs>
+        <cdb role="primary">
+            <cluster>cl-s2ymuyrq-103</cluster>
+            <srvctl_name>PRD_iad3vt</srvctl_name>
+            <env_file>PRD.env</env_file>
+            <port>1521</port>
+            <service_name>PRD_iad3vt</service_name>
+            <dg_service_name>PRD_iad3vt_DGB.hlthedgexap.pvthlthedgeprod.oraclevcn.com</dg_service_name>
+            <instance_prefix>PRD</instance_prefix>
+            <oracle_home>/u02/app/oracle/product/12.1.0/dbhome_3</oracle_home>
+            <tns_admin>/u02/app/oracle/product/12.1.0/dbhome_3/network/admin/PRD</tns_admin>
+            <log_archive_dest_number>4</log_archive_dest_number>
+            <dg_broker_config_file1>+DATAC1/PRD_IAD3VT/DGCONFIG/dr1prd.dat</dg_broker_config_file1>
+            <dg_broker_config_file2>+DATAC1/PRD_IAD3VT/DGCONFIG/dr2prd.dat</dg_broker_config_file2>
+            <wallet_dir>/var/opt/oracle/dbaas_acfs/PRD</wallet_dir>
+            <password_file>+DATAC1/PRD_iad3vt/PASSWORD/passwd</password_file>
+            <node_1_drg_log>/u02/app/oracle/diag/rdbms/prd_iad3vt/PRD1/trace/drcPRD1.log</node_1_drg_log>
+            <node_1_alert_log>/u02/app/oracle/diag/rdbms/prd_iad3vt/PRD1/trace/alert_PRD1.log</node_1_alert_log>
+            <node_2_drg_log>/u02/app/oracle/diag/rdbms/prd_iad3vt/PRD2/trace/drcPRD2.log</node_2_drg_log>
+            <node_2_alert_log>/u02/app/oracle/diag/rdbms/prd_iad3vt/PRD2/trace/alert_PRD2.log</node_2_alert_log>
+        </cdb>
+        <cdb role="standby">
+            <cluster>cl-haigmcva-072</cluster>
+            <srvctl_name>PRD_phx2xr</srvctl_name>
+            <env_file>PRD.env</env_file>
+            <port>1521</port>
+            <service_name>PRD_phx2xr</service_name>
+            <dg_service_name>prd_phx2xr_DGB.hlthedgexap.pvthlthedgedr.oraclevcn.com</dg_service_name>
+            <instance_prefix>PRD</instance_prefix>
+            <oracle_home>/u02/app/oracle/product/12.1.0/dbhome_3</oracle_home>
+            <tns_admin>/u02/app/oracle/product/12.1.0/dbhome_3/network/admin/PRD</tns_admin>
+            <log_archive_dest_number>5</log_archive_dest_number>
+            <dg_broker_config_file1>+DATAC1/PRD_PHX2XR/DGCONFIG/dr1prd.dat</dg_broker_config_file1>
+            <dg_broker_config_file2>+DATAC1/PRD_PHX2XR/DGCONFIG/dr2prd.dat</dg_broker_config_file2>
+            <wallet_dir>/var/opt/oracle/dbaas_acfs/PRD</wallet_dir>
+            <password_file>+DATAC1/PRD_phx2xr/PASSWORD/dbpasswd</password_file>
+            <node_1_drg_log>/u02/app/oracle/diag/rdbms/prd_phx2xr/PRD1/trace/drcPRD1.log</node_1_drg_log>
+            <node_1_alert_log>/u02/app/oracle/diag/rdbms/prd_phx2xr/PRD1/trace/alert_PRD1.log</node_1_alert_log>
+            <node_2_drg_log>/u02/app/oracle/diag/rdbms/prd_phx2xr/PRD2/trace/drcPRD2.log</node_2_drg_log>
+            <node_2_alert_log>/u02/app/oracle/diag/rdbms/prd_phx2xr/PRD2/trace/alert_PRD2.log</node_2_alert_log>
+        </cdb>
+        <cdb role="standby">
+            <cluster>cl-g7sk24ca-0bd</cluster>
+            <srvctl_name>CLSTD_uniq</srvctl_name>
+            <env_file>PRD.env</env_file>
+            <port>1521</port>
+            <service_name>CLSTD_uniq.hlthedgeexa.pvthlthedgeprod.oraclevcn.com</service_name>
+            <dg_service_name>CLSTD_uniq_DGB.hlthedgeexa.pvthlthedgeprod.oraclevcn.com</dg_service_name>
+            <instance_prefix>CLSTD</instance_prefix>
+            <oracle_home>/u02/app/oracle/product/12.1.0/dbhome_4</oracle_home>
+            <tns_admin>/u02/app/oracle/product/12.1.0/dbhome_4/network/admin/CLSTD</tns_admin>
+            <log_archive_dest_number>6</log_archive_dest_number>
+            <dg_broker_config_file1>+DATAC1/CLSTD_UNIQ/DGCONFIG/dr1prd.dat</dg_broker_config_file1>
+            <dg_broker_config_file2>+DATAC1/CLSTD_UNIQ/DGCONFIG/dr2prd.dat</dg_broker_config_file2>
+            <wallet_dir>/var/opt/oracle/dbaas_acfs/PRD</wallet_dir>
+            <password_file>+DATAC1/CLSTD_uniq/orapwclstd</password_file>
+            <node_1_drg_log>/u02/app/oracle/diag/rdbms/clstd_uniq/CLSTD1/trace/drcCLSTD1.log</node_1_drg_log>
+            <node_1_alert_log>/u02/app/oracle/diag/rdbms/clstd_uniq/CLSTD1/trace/alert_CLSTD1.log</node_1_alert_log>
+            <node_2_drg_log>/u02/app/oracle/diag/rdbms/clstd_uniq/CLSTD2/trace/drcCLSTD2.log</node_2_drg_log>
+            <node_2_alert_log>/u02/app/oracle/diag/rdbms/clstd_uniq/CLSTD2/trace/alert_CLSTD2.log</node_2_alert_log>
+        </cdb>
+    </cdbs>
+</data_guard>
