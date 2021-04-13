@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="python.xsl"?>
+
+<codes>
+    <samples>
+        <code name="var.py" subdir="sample">
+            <header>
+                <shebang>#!/usr/bin/env python3</shebang>
+                <desc>Variable assignment example code</desc>
+            </header>
+            
+            <vByte show="Y">
+                <name>BYTE1</name>
+                <value><![CDATA[23234
+dsf234
+234234e]]></value>
+            </vByte>
+            <input show="Y">
+                <var>INP1</var>
+                <prompt quote="double"><![CDATA[Enter your name:]]></prompt>
+            </input>
+
+            
+            <vByteArray show="Y">
+                <name>BA1</name>
+                <value><![CDATA[232
+Happy
+234234e]]></value>
+            </vByteArray>
+            <vByteArray show="Y">
+                <name>BA2</name>
+                <byteVar>BYTE1</byteVar>
+            </vByteArray>
+            
+            <vMemoryView show="Y">
+                <name>MV1</name>
+                <byteArray>BA1</byteArray>
+            </vMemoryView>
+            <vSet show="Y">
+                <name>S1</name>
+                <values>
+                    <value>1</value>
+                    <value>2</value>
+                    <value>3</value>
+                    <value>4</value>
+                    <value>5</value>
+                </values>
+            </vSet>
+            <vRange show="Y">
+                <name>R1</name>
+                <start>11</start>
+                <stop>-12</stop>
+                <step>-2</step>
+            </vRange>
+            <vBoolean show="Y">
+                <name>B1</name>
+                <value>True</value>
+            </vBoolean>
+            <vBoolean show="Y">
+                <name>B2</name>
+                <value>False</value>
+            </vBoolean>
+            <vInt show="Y">
+                <name>I1</name>
+                <value>100</value>
+            </vInt>
+            <vFloat show="Y">
+                <name>F1</name>
+                <value>100.0</value>
+            </vFloat>
+            <vComplex show="Y">
+                <name>C1</name>
+                <value>
+                    <real>10</real>
+                    <imagine>15</imagine>
+                </value>
+            </vComplex>
+            <vString show="Y">
+                <name>STR1</name>
+                <quote>double</quote>
+                <value>string in a double' quote</value>
+            </vString>
+            <vString show="Y">
+                <name>STR2</name>
+                <quote>single</quote>
+                <value>string in a single" quote</value>
+            </vString>
+            <vList show="Y">
+                <name>LST1</name>
+                <values>
+                    <value>1</value>
+                    <value>2</value>
+                    <value>3</value>
+                    <value>4</value>
+                    <value>5</value>
+                </values>
+            </vList>
+            <vList show="Y">
+                <name>LST2</name>
+                <values>
+                    <value>"Hello"</value>
+                    <value>"John"</value>
+                    <value>'reese'</value>
+                </values>
+            </vList>
+            <vList show="Y">
+                <name>LST3</name>
+                <values>
+                    <value>"Hey"</value>
+                    <value>"you"</value>
+                    <value>1</value>
+                    <value>2</value>
+                    <value>3</value>
+                    <value>"go"</value>
+                </values>
+            </vList>
+            <vTuple show="Y">
+                <name>TUP1</name>
+                <values>
+                    <value>1</value>
+                    <value>2</value>
+                    <value>3</value>
+                    <value>4</value>
+                </values>
+            </vTuple>
+            <vTuple show="Y">
+                <name>TUP2</name>
+                <values>
+                    <value>"Hey"</value>
+                    <value>"you"</value>
+                    <value>1</value>
+                    <value>2</value>
+                    <value>3</value>
+                    <value>"go"</value>
+                </values>
+            </vTuple>
+            <vDictionary show="Y">
+                <name>DIC1</name>
+                <keys>
+                    <key>
+                        <name>1</name>
+                        <value>"first name"</value>
+                    </key>
+                    <key>
+                        <name>2</name>
+                        <value>"last name"</value>
+                    </key>
+                    <key>
+                        <name>"age"</name>
+                        <value>33</value>
+                    </key>
+                </keys>
+            </vDictionary>
+            <variable_assign>
+                <name>userAge</name>
+                <assign>1</assign>
+                <assign_type>scalar</assign_type>
+                <desc><![CDATA[Assign list to to variable]]></desc>
+                <list_values>
+                    <value>21</value>
+                    <value>22</value>
+                    <value>23</value>
+                    <value>24</value>
+                    <value>25</value>
+                </list_values>
+            </variable_assign>
+        </code>
+    </samples>
+</codes>
