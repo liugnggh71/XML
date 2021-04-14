@@ -88,6 +88,7 @@
     </xsl:variable>
 
     <xsl:variable name="v_configuration_tns">
+        <xsl:text>output/</xsl:text>
         <xsl:value-of select="$v_configuration_name"/>
         <xsl:text>_tns.txt</xsl:text>
     </xsl:variable>
@@ -163,7 +164,11 @@
             </xsl:for-each>
         </xsl:result-document>
         <xsl:for-each select="//pairs/pair">
-            <xsl:variable name="v_pair_file" select="file"/>
+            <xsl:variable name="v_pair_file">
+                <xsl:text>output/</xsl:text>
+                <xsl:value-of select="file"/>
+            </xsl:variable>
+            
             <xsl:variable name="v_pair_name" select="substring-before($v_pair_file, '.')"/>
             <xsl:variable name="c_pair">
                 <xsl:copy-of select="."/>

@@ -90,15 +90,15 @@
     <users>
         <user role="sysdba">
             <user_name>sys</user_name>
-            <password>bSwocJs-b1_540d01</password>
+            <password>MySysPwd</password>
         </user>
         <user role="normal">
             <user_name>dbsnmp</user_name>
-            <password>bSwocJs-b1_540d01</password>
+            <password>MyDBSnmpPws</password>
         </user>
         <user role="sysasm">
             <user_name>sys</user_name>
-            <password>bSwocJs-b1_540d01</password>
+            <password>MyASMPwd</password>
         </user>
     </users>
     <cdbs>
