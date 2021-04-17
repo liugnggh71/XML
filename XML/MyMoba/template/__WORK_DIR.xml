@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../MobaMacro.xsd">
+   <name>__WORK_DIR</name>
+   <desc>Full code file: __WORK_DIR.ksh</desc>
+   <environment>KornShell</environment>
+   <hotkey>0</hotkey>
+   <line type="Text">cd ~/MyMoba/template</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">pwd</line>
+   <line type="KeyPress">RETURN</line>
+</macro>

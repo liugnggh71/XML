@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../gen_moba_xterm_macro.xsl"?>
+<xmoba_macros xmlns:xi="http://www.w3.org/2001/XInclude">
+    <file>template</file>
+    <xi:include href="../common/__cd_MyMoba.xml"/>
+    <xi:include href="../common/______cd_common.xml"/>
+    <xi:include href="../common/cmd.xml"/>
+    <xi:include href="../common/___FIND_moba_file.xml"/>
+    <xi:include href="../template/__WORK_DIR.xml"/>
+    <xi:include href="../template/__Help.xml"/>
+    <xi:include href="../template/__Contact.xml"/>
+    <transfer_map>
+        <transfer>
+            <source_xml>../unparsed_code/code_list.xml</source_xml>
+            <transfer_xsl>../parse_unparsed_code.xsl</transfer_xsl>
+            <master_output>../unparsed_code/code_list.txt</master_output>
+        </transfer>
+        <transfer>
+            <source_xml>code_list.xml</source_xml>
+            <transfer_xsl>../parse_unparsed_code.xsl</transfer_xsl>
+            <master_output>code_list.txt</master_output>
+        </transfer>
+        <transfer>
+            <source_xml>NEW_TOPIC_TEMPLATE.xml</source_xml>
+            <transfer_xsl>../gen_moba_xterm_macro.xsl</transfer_xsl>
+            <master_output>NEW_TOPIC_TEMPLATE.txt</master_output>
+        </transfer>
+    </transfer_map>
+    <!-- java -jar $jar_file -o:$out_file $xml_file $xsl_file -->
+</xmoba_macros>

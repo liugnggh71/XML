@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../MobaMacro.xsd">
+   <name>__Contact</name>
+   <desc>Full code file: __Contact.txt</desc>
+   <environment>Help</environment>
+   <hotkey>0</hotkey>
+   <line type="Text">cat &lt;&lt; 'EOH'</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">Garcia, Jose G &lt;Jose.GarciaGarcia@BSWHealth.org&gt; 325-668-8603</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">Futrell, Leslie &lt;Leslie.Futrell@BSWHealth.org&gt; 254-718-0803</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">Landrum, Warren &lt;Warren.Landrum@BSWHealth.org&gt; 214-538-2287</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">EOH</line>
+   <line type="KeyPress">RETURN</line>
+</macro>

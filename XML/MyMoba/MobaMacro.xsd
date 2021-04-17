@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="macro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="desc"/>
+        <xs:element ref="environment"/>
+        <xs:element ref="hotkey"/>
+        <xs:element maxOccurs="unbounded" ref="line"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="desc" type="xs:string"/>
+  <xs:element name="environment">
+    <xs:simpleType>
+      <xs:restriction base="xs:NCName">
+        <xs:enumeration value="SQLPlus"/>
+        <xs:enumeration value="Help"/>
+        <xs:enumeration value="Vi"/>
+        <xs:enumeration value="KornShell"/>
+        <xs:enumeration value="WebBrowser"/>
+        <xs:enumeration value="MobaXterm"/>
+        <xs:enumeration value="cmd"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="hotkey" type="xs:integer"/>
+  <xs:element name="line">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Text"/>
+            <xs:enumeration value="KeyPress"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

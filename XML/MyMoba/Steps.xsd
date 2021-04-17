@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="steps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="repository_dir" minOccurs="0"/>
+        <xs:element ref="macro_dir"/>
+        <xs:element maxOccurs="unbounded" ref="group"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="macro_dir">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NCName">
+          <xs:attribute name="alias_file" type="xs:NCName"/>
+          <xs:attribute name="packingdir" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="group">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="prefix"/>
+        <xs:element ref="subdir"/>
+        <xs:element maxOccurs="unbounded" ref="step"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="subdir" type="xs:NMTOKEN"/>
+  <xs:element name="prefix" type="xs:NMTOKEN"/>
+  <xs:element name="repository_dir" type="xs:NMTOKEN"/>
+  <xs:element name="step">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NCName">
+          <xs:attribute name="aliss" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

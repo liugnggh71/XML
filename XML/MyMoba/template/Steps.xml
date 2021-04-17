@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../Steps.xsl"?>
+
+<steps  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="../Steps.xsd">
+    <macro_dir packingdir='template.Alias' alias_file='template_ALIAS.sh'>template</macro_dir>
+    <group>
+        <prefix>FullProc</prefix>
+        <subdir>FullProcedure</subdir>
+        <step aliss='XR1'>Overview.txt</step>
+        <step aliss='XR2'>OracleSupportResearch.txt</step>
+        <step aliss='XR3'>Install_patch_util.txt</step>
+    </group>
+</steps>
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../MobaMacro.xsd">
+   <name>__Help</name>
+   <desc>Full code file: __Help.txt</desc>
+   <environment>Help</environment>
+   <hotkey>0</hotkey>
+   <line type="Text">cat &lt;&lt; 'EOH'</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">==To setup DDBoost client follow help in H_DDBoost_installer_binary== </line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">Extra utility Macros to Configure backup, </line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">if Macro begin with R it is in RMAN environment</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">if Macro begin with S it is in SqlPlus environment</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">if Macro begin with K it is in ksh or shell environment</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">if Macro begin with H it is help </line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">==DDBoost setup and utility Macros==</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">H_DDBoost_installer_binary                             Step by step instruction of</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">K_ftp_get_downloader_pl                                Use FTP to get DDBoost perl downloader </line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">K_scp_get_DDBoost_binary                               Use SCP to get DDBoost perl downloader</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">K_ls_DDBoost_installed_config_file                     List installed files</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">S_report_DDBoost_conf                                  Query dictionary on DDBoost</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">==Cloud control job schedule==</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">R_CC_8_hour_archive_control          Schedule hourly archivelog and controlfile backup in CC</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">R_CC_daily                           Standard daily RMAN backup code in CC</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">R_CC_weekly_full                     Standard weekly full incremental backup level 0</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">R_CC_weekly_incremental              Standard weekly full incremental backup level 1</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">==RMAN backup setup==</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">S_00_set_control_file_record_keep_time_62  Set 62 as the controlfile keep time and check result</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">S_000000_turn_on_archivelog                Check and help for turn on archivelog steps</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">S_01_set_log_archive_dest                  Set archivelog destination help and status check</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">S_02_set_db_recovery_file_dest             Flash back setup and set db_recovery_file_dest help</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">S_03_set_force_logging                     Check and set Set force_logging help</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">S_04_block_curruption_protedt              Check block protection setting and help to setup</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">S_05_block_tracking_help                   Incremental backup blockcheck feature setup and check</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">R_00_reset_rman_config                     Clear RMAN configuration</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">R_01_rman_config_tape_basic                Configure RMAN basic tape configuration</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">R_02_rman_config_tape_channel_count        Increase tape channel from default of 1</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">==Daily backup maintenance==</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">R_report_backup                      RMAN backup report codes</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">S_GEN_makeup_bck_code                Generate code to do minimum effort makeup backup</line>
+   <line type="KeyPress">RETURN</line>
+   <line type="Text">EOH</line>
+   <line type="KeyPress">RETURN</line>
+</macro>

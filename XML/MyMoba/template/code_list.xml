@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="../parse_unparsed_code.xsl"?>
+
+<codes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../code_list.xsd">
+    <directory>template</directory>
+    <file>__WORK_DIR.ksh</file>
+    <file action="Help">__Help.txt</file>
+    <file action="Help">__Contact.txt</file>
+    <!--     
+    <file action="WebBrowser">Daily_bck_issue.txt</file>
+    <file action="vi">multi_day_db_bck_apxdev.ksh</file>
+    <file action="Help">SPACE_ticket_help.txt</file>
+ -->
+</codes>
